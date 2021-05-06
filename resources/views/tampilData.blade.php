@@ -1,15 +1,15 @@
 @extends('master')
 
 @section('content')
+@if (session('status'))
 <div class="row mb-3">
     <div class="col">
-        @if (session('status'))
             <div class="alert alert-success">
                 {{ session('status') }}
             </div>
-        @endif
+        </div>
     </div>
-</div>
+@endif
 <div class="row mb-3">
     <div class="col">
         <a name="" id="" class="btn btn-primary" href="{{ route('tambah') }}" role="button">Tambah Produk</a>

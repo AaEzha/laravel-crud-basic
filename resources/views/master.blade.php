@@ -7,7 +7,7 @@
     <title>{{ config('app.name') }} - {{ $title ?? "Produk" }}</title>
     <link rel="stylesheet" href="{{ url('bootstrap/css/bootstrap.min.css') }}">
 </head>
-<body class="container">
+<body class="mx-1">
     <div class="row">
         <div class="col-auto">
             <img src="{{ url('food.png') }}" alt="Food">
@@ -37,7 +37,23 @@
         </nav>
     </header>
 
-    @yield('content')
+    <div class="row">
+        <div class="col-md-2">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    Informasi
+                </div>
+                <div class="card-body">
+                    <h4 class="card-title">NIM</h4>
+                    <p class="card-text">Nama</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            @yield('content')
+        </div>
+    </div>
+
 
     <script src="{{ url('bootstrap/js/bootstrap.min.js') }}"></script>
 </body>
